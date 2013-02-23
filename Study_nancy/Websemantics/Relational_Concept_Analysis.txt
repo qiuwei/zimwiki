@@ -1,0 +1,8 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2013-01-04T14:05:44+01:00
+
+====== Relational Concept Analysis ======
+Created Friday 04 January 2013
+
+Here is a very nice exmaple about pizza. Check it out and you will understand the basics.

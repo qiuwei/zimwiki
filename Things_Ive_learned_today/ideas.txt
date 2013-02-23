@@ -1,0 +1,8 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2013-01-24T00:03:43+01:00
+
+====== ideas ======
+Created Thursday 24 January 2013
+
+* create a tool to automatically generate 宋词 using richer linguistic information

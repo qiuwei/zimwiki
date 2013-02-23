@@ -1,0 +1,11 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2013-01-04T15:50:53+01:00
+
+====== stage ======
+Created Friday 04 January 2013
+
+How does the stage come from?
+In English, stage(verb) has a meaning of prepare set the stage for,
+examples:
+these churchmen helped to set the stage for popular reform

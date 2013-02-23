@@ -1,0 +1,55 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2013-01-28T21:35:19+01:00
+
+====== corpus ======
+Created Monday 28 January 2013
+
+[[+Observations_and_problems]]
+[[+statistics]]
+
+
+This is based on Michaela's paper
+Grouding Action Descriptions in Videos
+
+=== What we got in the corpus ===
+* video segments with semantics(not well formed) and multiple sentence descriptions
+* similartiy between those sentence descriptions, they call it verbs and phrases similarity model
+
+=== Comparison with MSVD: ===
+* high quality videos
+* longer descriptions, each sentence is associated with one time frame
+
+=== MPII, cooking composite activities corpus ===
+Cooking domain, different activities:
+* preparing corrots
+* seperating eggs
+
+What the corpus provides:
+low level annotations: 
+for example, 
+open [hand, drawer]
+take out [hand, knife, drawer]
+
+The posistions are important, the first argument is subject, the second one is the object,  others are not determined(most of them are various other arguments)
+There are 25 columns each line.
+
+=== Vinter corpus ===
+by adding textual description
+open [hand, drawer] => "The person takes a knife from the drawer"
+So, what in the corpus:
+* aignments between video segements and textual description
+* multiple textual descriptions can be consdiered as paraphrases
+* alignments between textual descriptions and low-level activitiy annotations
+
+All files in the corpus:
+task-video-index:
+Describe what kind of task is involved in each video:
+format:
+Task-id vegatables videos
+
+questions: what task does each taskid represents? 
+
+
+
+

@@ -1,0 +1,85 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2013-02-15T10:20:12+01:00
+
+====== language model based ======
+Created Friday 15 February 2013
+
+===== The idea =====
+
+suppose we have two words 
+bird fly
+
+How can we use a language model to verbalize a sentence?
+The idea is considering a restricted generation problem. We consider these two words are the content words which are obligatory to verbalize, and the only words missing in the sentence are those gluing words(e.g, functional words)
+
+For example:
+A bird flies.
+A is the only missing piece in the verbalized sentence.
+
+So how can we use the language model to help us find the missing information?
+We know language model will give us a probability measure(not necessary to be probability) of any utterance in the language,
+
+For example, if given two sentences with their probabilities:
+* A bird flies.  0.00001
+* The bird flies. 0.00000001
+
+We would consider the first sentence may be more possible to be verbalized.
+But there is too much freedom in the utterance! You can put as many words as you want in the bones of sentence!
+
+===== Implementation =====
+
+so the interface would be:
+(verablize [langmodel config])
+while langmodel is the ngram model,
+config is just the seed words(or content words which are required to be verbalized)
+for example, <person, washes, orange> would be a good config
+then this functoin would verbalize it to:
+a person washes the orange.
+
+This sentence is selected because it's normalized probability is the highest.
+
+==== Consideration ====
+if we use 1-gram it would always use 
+* the most frequent word
+* even without words, because our algorithm prefers short sentence.
+
+so first let's consider 2-gram
+
+we put some artificial start and end label for each sentence when we build the corpus,
+for instance
+\:start she washes an orange \:end 
+based on 2gram model the probability of this sentence is
+Prob = P(:start) * P(she |:start) *P(washes| she) * P(an | orange) *P(:end|orange)
+
+where P(:start) would be the same for all cases,
+So Prob = \frac{count (she start)}/ {count(:start)} *... * \frac{count(orange \:end)}{orange}
+
+**Do we want smoothing here?**
+on one hand, if we don't use smoothing, it means we are trying to combine 2grams from the corpus, of course we will lose some generation power of language model.
+The problem is that whether this ability important or not? The observation here is our corpus is really domain specific. we need experiments to answer this question.
+
+To make things simple, we first implement the model without smoothing.
+The algorithm:
+<word1, word2, word3>
+our algorithm would grow the utterance from left to right, and each time try to eat more content words which need to be verbalized.
+So
+first
+we try to find most probable utterance contains word1 as end.
+for length 1 utterance: the probability would be 
+P(word1|:start),
+We could imagine this probability is very likely to be 0.
+
+Then for length 2,
+We iterate through the vocabulary,
+P(w_x|:start) * P(word1|w_x)/2
+
+For length 3
+P(w_x|:start)* P(w_y|w_x)*P(word1|w_y)/3
+
+Since we can grow the sentence as long as we want,  so there are two questions to answer for implementation:
+* when to stop?
+* where can dynamic programming come to help?
+
+
+

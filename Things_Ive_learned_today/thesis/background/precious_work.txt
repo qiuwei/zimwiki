@@ -1,0 +1,118 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2013-02-04T16:12:40+01:00
+
+====== precious work ======
+Created Monday 04 February 2013
+
+===== \cite{Kuznetsova2010} =====
+
+* each query image
+* retireve relevant candidate natural language phrases based on visual similarity(Corpus Ordonez2011)
+* simlarity:
+	* object detections
+	* scene classifications
+	* region based detections for stuff categories
+* 4 types of phrases are collected
+	* NPs
+	* VPs
+	* Region/Stuff PPs
+	* Scene PPs
+Use ILP(Integer Linear Programming) to do the planning and generation.
+
+Comments:
+* very shallow, no semantics representation is built.
+* align the object, scene, regions to the phrases of similar images
+* have ungrammatical surface realization, unrelated content
+
+===== \cite{Kulkarni2011} =====
+detecting
+* objects
+* modifiers
+* spatial relations
+
+these detections are smoothed by statistical prior obtained from descriptive text.
+Smoothed results are used as contraints for generation.
+
+contribution: relates the generation process of the content of the picture.
+
+Method overview:
+* Detectors: detect things(birds...) and stuff(grass, trees)
+* each object is processed by a set of attribute classifiers.
+* each pair of candidate regions is processed by prepositional relationship functions
+* CRF is constructed:
+	* unary image potentials
+	* higher order text based potentials
+* labeling of the graph is predicted
+* sentences are generated based on the labeling
+
+lables for each node is node dependent(related to the detector fired)
+* objects or stuff: detectors
+* attributes: a set of appearance attribute nodes the domain corresponds to a set of appearance attributes that can modify the vual charactersitics.
+
+Object: minimize enrgy function over labelings, L of an image I with a text prior
+
+=== Labeling is not important here for me. ===
+
+Text based potentials measure the possiblility the attributes modify objects, and the prepostions relationship between objects according to text corpora.
+Stanford parser is used to extract these information.
+Google potentials: based are google search result
+The the final potential is simply linear combination of text-based and google.
+
+==== Generateion: this is related. ====
+
+The output of CRF:
+labeling of the image.
+* nouns
+* modifiers
+* spatial relationship
+So:
+<<white, cloud>, in <blue, sky>>
+
+=== => how to generate complete sentence such as "There is a white cloud in the blue sky"?? ===
+
+In this paper the generation is restrcited:
+* all words occurred in the labels(content words) must be used.
+* only gluing words(functional words such as 'there', 'is ' etc can be inserted.
+
+==== Decoding using Language Models ====
+In this paper, 
+Gluing word are predicted by Langue models.
+Suppose we want to determine whether to inseart a function word x between a pair of words α and β int he meaning representation
+length-normalized probability 
+p(α β) , p(αxβ) will be compared.
+Bigram language models,
+p(α x β ) = p(α)p(x|α) p(β|x)
+
+for more than two functional words between α and β, dynamic programming can be used to find the optimal sequence.
+This approach composes a separte sentence for each triple.
+
+==== Templates with linguistic contraints ====
+The problems with the language models based method:
+* difficult to enforce grammatically correct sentences
+* ignorant of discourse structure
+
+Solution: use linguistically motivated constraints.
+But in this paper no details of this method are described.
+
+Experiments:
+Wikipedia pages that describe the objects are extracted as corpus
+UIUC PASCAL sentence dataset which contains up to five human generated sentences that describe 1000 images.
+
+Automatic evaluation: bleu( machine translation: from images to texts)
+However, there is much larger variaty in generating setences from images.
+
+TODO
+[ ] read BLEU
+[ ] how can the bleu score of meaning representation be calculated?
+
+
+
+
+
+
+
+
+
+
+

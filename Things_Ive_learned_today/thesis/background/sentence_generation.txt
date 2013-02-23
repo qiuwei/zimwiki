@@ -1,0 +1,15 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2013-02-08T14:42:37+01:00
+
+====== sentence generation ======
+Created Friday 08 February 2013
+
+There are generally two ways which have been tried out:
+* template-based
+	* \cite{Zhoua}
+	* \cite{Channarukul2003}
+* using language model
+	* \cite{Stehouwer2009}
+	* \cite{Brants2007}
+

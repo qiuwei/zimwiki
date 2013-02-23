@@ -1,0 +1,9 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2013-01-04T14:31:22+01:00
+
+====== xargs ======
+Created Friday 04 January 2013
+
+The point of xargs is turn input into arguments.
+And here goes a nice tutorial of it: http://www.cyberciti.biz/faq/linux-unix-bsd-xargs-construct-argument-lists-utility/

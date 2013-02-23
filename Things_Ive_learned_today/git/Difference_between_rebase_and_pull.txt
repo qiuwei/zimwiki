@@ -1,0 +1,11 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2013-01-04T17:46:28+01:00
+
+====== Difference between rebase and pull ======
+Created Friday 04 January 2013
+
+* Rebase: will find the common history and then first apply the remote changes, after that apply local changes.
+	* normally use when on the same branch
+* Pull: will try to apply remote changes on top of local changes.
+	* normally use when on different branches

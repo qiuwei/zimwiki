@@ -1,0 +1,42 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2013-02-12T12:11:03+01:00
+
+====== previous work sum ======
+Created Tuesday 12 February 2013
+
+There are 3 types of methods in previous literature:
+
+=== retrieval and summarization: ===
+\cite{Aker2010}: 
+summarizer with use of GPS information.
+Instead of using language model, they extract dependency patterns in order to capture long distance information 
+
+=== language model based: ===
+
+=== template based: ===
+\cite{Hanckmann2012}
+In this paper a Rule based system is used not only for the action classification but also for the description generation
+
+48 actions : 73 rules
+rules are a set of conditions
+
+Example 1. Rule representing the catch action.
+ action = chase 
+condition(1) = object(E1) moving at time(T1)
+condition(2) = object(E2) moving at time(T2)
+condition(3) = object(E1) is a person
+condition(4) = object(E2) is a person 
+condition(5) = time(T1) and time(T2) overlap
+Resulting sentence = “Person E1 chases Person E2”
+
+COMMENT: 
+for our situation, we can also use rules to capture "find" action?
+or a more general statistical detector can be used?
+
+Previous work on creating textual descriptions from video has been focused on:
+* using speech recognition to genersate video subscriptions
+* detecting and extracting text which is present  in the video
+* detecting patterns in a restricted environment and use the detected patterns to generate a description
+
+The third one is only applied in action restrcted environments( video data from sports in which strict rules apply, Detecting the state of the game directly translates in a description)

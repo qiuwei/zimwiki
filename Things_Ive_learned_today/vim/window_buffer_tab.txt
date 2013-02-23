@@ -1,0 +1,16 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2013-01-05T11:30:55+01:00
+
+====== window buffer tab ======
+Created Saturday 05 January 2013
+
+  A buffer is the in-memory text of a file.
+  A window is a viewport on a buffer.
+  A tab page is a collection of windows.
+
+window command: ctrl w
+ctrl w s: split current window
+
+v[ertical]s[plit] filename
+sp[lit] filename

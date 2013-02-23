@@ -1,0 +1,9 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2013-01-05T14:02:19+01:00
+
+====== rsa key ======
+Created Saturday 05 January 2013
+
+How to understand this way of authentication?
+You can imagine you create a key and a lock, and update the lock to remote server and keep the key local. Every time you want to access the remote server, you will use the local key automatically.

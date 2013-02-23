@@ -1,0 +1,23 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2013-01-04T13:47:01+01:00
+
+====== find ======
+Created Friday 04 January 2013
+
+I've learned how to use find
+
+find [path] [expression]
+
+examples:
+
+find . -maxdepth 1 -name '*.avi' -o -name '*.mpg'
+It will find all files that in current directory(because we specify the maxdepth to 1) that with the name '*.avi'  or '*.mpg'
+
+find also support regex:
+
+examples:
+find . -regex '.*log.*'
+
+here goes a very nice tutorial of it:
+http://www.linux.ie/newusers/beginners-linux-guide/find.php

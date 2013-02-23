@@ -1,0 +1,35 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2013-01-04T13:46:41+01:00
+
+====== Home ======
+Created Friday 04 January 2013
+
+[[:linux:find]]
+[[:linux:tac]]
+[[:linux:xargs]]
+[[:linux:rsa_key]]
+[[:linux:bash_keybindings]]
+
+
+[[:git:stage]]
+[[:git:Difference_between_rebase_and_pull]]
+
+[[:vim:window_buffer_tab]]
+
+[[:python:xml]]
+[[:python:unicode]]
+
+[[:programming:s-expression]]
+
+[[:ideas]]
+
+[[:thesis:resource]]
+
+
+
+
+
+
+
+

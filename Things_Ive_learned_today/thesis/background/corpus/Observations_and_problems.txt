@@ -1,0 +1,12 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2013-02-23T10:26:24+01:00
+
+====== Observations and problems ======
+Created Saturday 23 February 2013
+
+* typo:
+	* s32-d70 "poor juice"
+* ungrammartical
+	* "add one table spoon sugar"
+	* do we want 

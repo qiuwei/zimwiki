@@ -1,0 +1,11 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2013-01-08T23:07:19+01:00
+
+====== s-expression ======
+Created Tuesday 08 January 2013
+
+s-expression is one way to store data(like xml) and it can be also evaluated in some languages like lisp.
+
+Here is a wikipage about how to parse it using python
+http://rosettacode.org/wiki/S-Expressions#Python

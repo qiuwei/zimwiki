@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2013-01-28T21:35:04+01:00
+
+====== background ======
+Created Monday 28 January 2013
+
+[[+corpus]]
+[[+precious_work]]
+[[+previous_work_sum]]
+[[+google_5gram]]
+[[+sentence_generation]]
+

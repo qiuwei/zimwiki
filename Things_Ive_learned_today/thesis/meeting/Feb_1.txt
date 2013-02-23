@@ -1,0 +1,24 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2013-02-01T16:55:59+01:00
+
+====== Feb 1 ======
+Created Friday 01 February 2013
+
+Previous work:
+1. Every Picture Tells a Story:  Generating Sentences from Images [Farhadi et al. ECCV10]
+2. Baby Talk: Understanding and Generating Image Descriptions [Kulkarni et al, CVPR 2011]
+3. Collective Generation of Natural Image Descriptions [Kuznetsova, ACL 2012]
+4. Natural Language Description of Human Activites from Video Images Based on Concept Hierarchy of Actions [Kojima and Fukunaga, IJCV 2001]
+5. Automated Textual Descriptions for a Wide Range of Video Events with 48 Human Actions [Hanckmann 12 Eccv]
+
+Aims:
+1. reimplement language model based NLG system as a baseline. We attempt to use google 5-gram model with the model trained on the data we collected.
+
+Open question:
+1. how to filter out those elements in triples which are not verbalized?
+	a. it seems that this information is sort of encoded in the language model, [by Manfred]
+	b. we can also train some classifiers based on corpus to deal with it explicitly. [by Thater]
+
+Technical stuff:
+1. How can we pick out the most possible realizaition only with some very basic triples without even knowing the position?

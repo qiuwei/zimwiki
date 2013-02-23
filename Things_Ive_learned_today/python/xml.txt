@@ -1,0 +1,8 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2013-01-05T13:09:08+01:00
+
+====== xml ======
+Created Saturday 05 January 2013
+
+Choosee lxml over beautifulsoup, it's definitely better.

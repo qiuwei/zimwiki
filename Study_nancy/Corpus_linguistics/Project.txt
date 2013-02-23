@@ -1,0 +1,42 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2013-01-06T14:50:56+01:00
+
+====== Project ======
+Created Sunday 06 January 2013
+
+The task of this project is to do so called **Dialog Act Classification.**
+We get a learning corpus made of several learning instance. Each instance consists of several sentences with the structure:
+
+Agent : Speak Content : Speech Act
+Agent : Speak Content : Speech Act
+Agent : Speak Content : Speech Act
+Agent : Speak Content : Speech Act
+
+The task is we try to learn a model from it, then apply this model to a new discourse:
+
+Agent : Speak Content :
+Agent : Speak Content :
+Agent : Speak Content : 
+Agent : Speak Content : 
+
+In other words we need to predict the **Speech Act** tag!
+
+So it's a typical sequence labeling problem, of course you can always treat it as a simple classification problem by ignoring some history.
+
+===== What kind of features can be useful? =====
+Sicne we want to use CRF to do the sequence labeling, so we want to use descrete features.
+1. The agent will be of cause very import, it should be a binary feature.
+2. The type of the sentence. It may consist several sentences. The type of the last sentence should be very imformative:
+	a. simply because if the last sentence is  question, the agent may want to ask question.
+	b. and we may also need to distinguish types of questions maybe normal question or special question.
+3. The content of the sentence
+	a. first of all, the shallowest feature woulbe unary feature and binary feature. This would capture some information.
+		1. In case there are two many features, we may need to do feature selection first. (TODO, feature selection criterion, number of features)
+		2. And this feature would be binary feature.
+	b. of cause we also want to use some syntactic feature such as POS information, but since we lack tools which can deal with french. It would be too difficult.
+	c. semantics feature: no way... 
+
+===== Technical details and implementation =====
+1. We want to use CRF++ as the basic tool to do sequence labeling, simply because I've used it and it's fast and has a nice interface for python.
+2. For feature extract step, we can use nltk. The problem can be that it's specified for English, so it may not work for French.
